@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+span{
+    color:#bfd309;
+}
+a{
+    text-decoration: none;
+}
+.button1{
+    color: white;
+    border: 4px solid #bfd309;
+    padding: 10px 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.4s ease;
+}
+.button1:hover{
+    background-color: #bfd309;
+}
+.naslov-sekcije{
+    text-transform: uppercase;
+    font-size: 65px;
+    letter-spacing: 10px;
+}
+
+/*HEADER*/
+#header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+#header .header{
+    background-color: black;
+    height: 100%;
+}
+#header .header .navigacija{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+}
+#header .naslov a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-left: 90px;
+}
+#header .navigacija ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+#header .navigacija .lista{
+    margin-right: 60px;
+}
+#header .navigacija ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 30px;
+}
+#header .navigacija ul li a:hover{
+   color: #bfd309;
+}
+
+
+/*POCETNA*/
+#pocetna{
+    background-image: url(./slike/walp.webp);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#pocetna::after{
+    content: '';
+    background-color: black;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    opacity: 0.85;
+    z-index: -1;
+}
+#pocetna .pocetna h1{
+    font-size: 65px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/*USLUGE*/
+#usluge .naslov-tekst{
+    text-align: center;
+}
+#usluge .naslov-tekst p{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 70px 120px;
+}
+#usluge .usluge-stavke{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+#usluge .usluge-stavke .stavka{
+    background-image: url(./slike/pozadina.jpg);
+    background-size: cover;
+    padding: 50px;
+    color: white;
+    border-radius: 15px;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+    transition: 0.4s ease;
+}
+#usluge .usluge-stavke .stavka::after{
+    content: '';
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.85;
+    border-radius: 15px;
+    z-index: -1;
+}
+#usluge .usluge-stavke .stavka:hover{
+    transform: scale(1.05);
+}
+
+/*O-meni*/
+#o-meni .container{
+    flex-direction: row;
+}
+#o-meni .o-meni-tekst h1{
+    margin-bottom: 30px;
+}
+#o-meni .o-meni img{
+    height: 450px;
+    width: 450px;
+}
+#o-meni .o-meni p{
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#o-meni .button1{
+    color: black;
+    font-weight: 600;
+}
+#o-meni .o-meni-tekst{
+    width: 550px;
+    padding: 30px;
+}
+
+/*KONTAKT*/
+#kontakt .container{
+    min-height: 50vh;
+}
+#kontakt .stavke{
+    display: flex;
+    flex-direction: row;
+}
+#kontakt h1{
+    margin-bottom: 50px;
+}
+#kontakt .stavke .stavka{
+    margin: 100px;
+    text-align: center;
+}
+#kontakt .stavke .stavka h2{
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#kontakt .stavke .stavka p{
+    font-weight: 600;
+}
+#kontakt .stavke .stavka svg{
+    height: 150px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/*FOOTER*/
+#footer{
+    background-color: black;
+}
+#footer .container{
+    min-height: 20vh;   
+}
+#footer .naslov h1{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#footer .drustvene-mreze{
+    display:flex;
+    flex-direction: row;
+}
+#footer .drustvene-mreze .mreza{
+    margin: 10px;
+    transition: 0.4s ease;
+}
+#footer .drustvene-mreze .mreza:hover{
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width:930px){
+    #header .lista{
+        visibility: hidden;
+    }
+    #usluge .usluge .usluge-stavke{
+        flex-direction: column;
+    }
+    #usluge .naslov-tekst .naslov-sekcije{
+        margin-top: 50px;
+    }
+    #usluge .naslov-tekst p{
+        margin: 40px;
+    }
+    #o-meni .o-meni {
+        margin-top: 150px;
+    }
+    #o-meni .container{
+        flex-direction: column-reverse;
+    }
+    #o-meni .o-meni-tekst .naslov-sekcije{
+        margin-bottom: 50px;
+    }
+    #o-meni .o-meni-tekst{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    #kontakt .kontakt .naslov-sekcije{
+        margin-left: 20px;
+    }
+    #kontakt .kontakt{
+        margin-top: 150px;
+        margin-bottom: 150px;
+    }
+    #kontakt .kontakt .stavke{
+        flex-direction: column;
+    }
+    #kontakt .kontakt .stavka{
+        margin: 20px;
+    }
+}
