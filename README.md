@@ -1,1 +1,2 @@
-# Simple portfolio website (non-responsive)
+# Simple portfolio website
+
